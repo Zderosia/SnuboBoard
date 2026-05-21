@@ -92,8 +92,8 @@ const InlineContent = React.memo(({ cardId }) => {
       >
         <div className={styles.hidable}>
           {card.name}
-          <span className={styles.cardId}>#{card.id}</span>
         </div>
+        <span className={styles.cardId}>#{card.id}</span>
       </span>
       {descriptionText && (
         <span className={classNames(styles.attachments, styles.descriptionText, styles.hidable)}>
