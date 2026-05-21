@@ -103,6 +103,7 @@ const StoryContent = React.memo(({ cardId }) => {
         )}
         <div className={classNames(styles.name, card.isClosed && styles.nameClosed)}>
           {card.name}
+          <span className={styles.cardId}>#{card.id}</span>
         </div>
         {card.description && <div className={styles.descriptionText}>{descriptionText}</div>}
         {(withAge || attachmentsTotal > 0 || notificationsTotal > 0 || listName) && (

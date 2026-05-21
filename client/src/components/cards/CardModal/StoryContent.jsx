@@ -295,6 +295,7 @@ const StoryContent = React.memo(() => {
               ) : (
                 <div className={styles.headerTitle}>{card.name}</div>
               )}
+              <span className={styles.cardId}>#{card.id}</span>
             </div>
           </div>
         </Grid.Column>
