@@ -13,7 +13,7 @@ module.exports = {
 
   async fn(inputs) {
     const queryResult = await sails.sendNativeQuery(
-      'SELECT next_id() as id from generate_series(1, $1) ORDER BY id',
+      'SELECT next_card_id() as id from generate_series(1, $1) ORDER BY id',
       [inputs.total],
     );
 

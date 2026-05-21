@@ -148,7 +148,10 @@ const ProjectContent = React.memo(({ cardId }) => {
 
   return (
     <div className={styles.wrapper}>
-      <div className={classNames(styles.name, card.isClosed && styles.nameClosed)}>{card.name}</div>
+      <div className={classNames(styles.name, card.isClosed && styles.nameClosed)}>
+        {card.name}
+        <span className={styles.cardId}>#{card.id}</span>
+      </div>
       {coverUrl && (
         <div className={styles.coverWrapper}>
           <img src={coverUrl} alt="" className={styles.cover} />

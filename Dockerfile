@@ -29,7 +29,6 @@ FROM node:22-alpine
 RUN apk -U upgrade \
   && apk add bash python3 squid --no-cache
 
-USER node
 WORKDIR /app
 
 COPY --chown=node:node LICENSE.md .
@@ -45,7 +44,12 @@ RUN python3 -m venv .venv \
   && .venv/bin/pip3 install -r requirements.txt --no-cache-dir \
   && mv .env.sample .env \
   && mv public/index.ejs views \
-  && npm config set update-notifier false
+  && npm config set update-notifier false \
+  && chown -R node:node .venv .env views \
+  && mkdir -p logs data \
+  && chown -R node:node logs data
+
+USER node
 
 VOLUME /app/data
 EXPOSE 1337
