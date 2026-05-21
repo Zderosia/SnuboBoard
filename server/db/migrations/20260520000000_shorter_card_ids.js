@@ -5,7 +5,7 @@
 
 module.exports.up = async (knex) => {
   await knex.raw(`
-    CREATE SEQUENCE card_id_seq START 1;
+    CREATE SEQUENCE card_id_seq START 200;
 
     CREATE FUNCTION next_card_id(OUT id BIGINT) AS $$
     BEGIN
