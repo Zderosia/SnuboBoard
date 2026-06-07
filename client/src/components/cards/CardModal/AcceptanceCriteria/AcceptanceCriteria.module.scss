@@ -1,0 +1,177 @@
+/*!
+ * Copyright (c) 2024 PLANKA Software GmbH
+ * Licensed under the Fair Use License: https://github.com/plankanban/planka/blob/master/LICENSE.md
+ */
+
+:global(#app) {
+  .actionButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #6b808c;
+    padding: 4px;
+    outline: none;
+    transition: color 0.3s ease;
+
+    &:hover:not(:disabled) {
+      color: #17394d;
+    }
+
+    &:disabled {
+      color: #ccc;
+      cursor: default;
+    }
+  }
+
+  .addButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #6b808c;
+    padding: 4px;
+    outline: none;
+    transition: color 0.3s ease;
+
+    &:hover:not(:disabled) {
+      color: #17394d;
+    }
+
+    &:disabled {
+      color: #ccc;
+      cursor: default;
+    }
+  }
+
+  .addItem {
+    padding: 4px 0;
+  }
+
+  .addItemContent {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+  }
+
+  .addItemInput {
+    border: none;
+    border-radius: 3px;
+    background: rgba(9, 30, 66, 0.04);
+    color: #17394d;
+    flex: 1;
+    font-size: 14px;
+    line-height: 20px;
+    min-height: 28px;
+    outline: none;
+    padding: 6px 8px;
+
+    &:focus {
+      background: rgba(9, 30, 66, 0.08);
+    }
+
+    &::placeholder {
+      color: #8c8c8c;
+    }
+  }
+
+  .addIcon {
+    color: #6b808c;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .contentModule {
+    margin-bottom: 24px;
+  }
+
+  .item {
+    align-items: flex-start;
+    display: flex;
+    gap: 8px;
+    padding: 4px 0;
+  }
+
+  .itemCompleted {
+    .itemInput {
+      color: #8c8c8c;
+      text-decoration: line-through;
+    }
+  }
+
+  .itemActions {
+    align-items: center;
+    display: flex;
+    gap: 2px;
+    flex-shrink: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    .item:hover & {
+      opacity: 1;
+    }
+  }
+
+  .itemContent {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    gap: 8px;
+  }
+
+  .itemInput {
+    border: none;
+    border-radius: 3px;
+    color: #17394d;
+    flex: 1;
+    font-size: 14px;
+    line-height: 20px;
+    min-height: 28px;
+    outline: none;
+    padding: 4px;
+
+    &:focus {
+      background: rgba(9, 30, 66, 0.04);
+    }
+
+    &:read-only {
+      background: transparent;
+    }
+  }
+
+  .list {
+    padding-top: 4px;
+  }
+
+  .moduleHeader {
+    color: #17394d;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 0 0 4px;
+    padding: 6px 0;
+    word-wrap: break-word;
+  }
+
+  .moduleIcon {
+    color: #17394d;
+    font-size: 17px;
+    height: 32px;
+    left: -40px;
+    line-height: 32px;
+    margin-right: 0;
+    position: absolute;
+    top: 2px;
+    width: 32px;
+  }
+
+  .moduleWrapper {
+    margin: 0 0 0 40px;
+    position: relative;
+  }
+
+  .progress {
+    color: #6b808c;
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 8px;
+  }
+}

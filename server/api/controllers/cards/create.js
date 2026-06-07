@@ -157,6 +157,10 @@ module.exports = {
       type: 'json',
       custom: isStopwatch,
     },
+    acceptanceCriteria: {
+      type: 'json',
+      allowNull: true,
+    },
   },
 
   exits: {
@@ -199,6 +203,7 @@ module.exports = {
       'dueDate',
       'isDueCompleted',
       'stopwatch',
+      'acceptanceCriteria',
     ]);
 
     const card = await sails.helpers.cards.createOne

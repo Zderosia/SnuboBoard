@@ -1,0 +1,16 @@
+/*!
+ * Copyright (c) 2024 PLANKA Software GmbH
+ * Licensed under the Fair Use License: https://github.com/plankanban/planka/blob/master/LICENSE.md
+ */
+
+exports.up = async (knex) =>
+  knex.schema.alterTable('card', (table) => {
+    /* Columns */
+
+    table.json('acceptance_criteria');
+  });
+
+exports.down = (knex) =>
+  knex.schema.table('card', (table) => {
+    table.dropColumn('acceptance_criteria');
+  });

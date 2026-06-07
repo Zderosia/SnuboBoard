@@ -22,6 +22,7 @@ export default class extends BaseModel {
     dueDate: attr(),
     isDueCompleted: attr(),
     stopwatch: attr(),
+    acceptanceCriteria: attr(),
     isClosed: attr(),
     commentsTotal: attr({
       getDefault: () => 0,
@@ -654,6 +655,7 @@ export default class extends BaseModel {
       dueDate: this.dueDate,
       isDueCompleted: this.isDueCompleted,
       stopwatch: this.stopwatch,
+      acceptanceCriteria: this.acceptanceCriteria,
       isClosed: this.isClosed,
       ...data,
     });

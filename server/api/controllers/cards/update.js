@@ -192,6 +192,10 @@ module.exports = {
       type: 'json',
       custom: isStopwatch,
     },
+    acceptanceCriteria: {
+      type: 'json',
+      allowNull: true,
+    },
     isSubscribed: {
       type: 'boolean',
     },
@@ -256,6 +260,7 @@ module.exports = {
         'dueDate',
         'isDueCompleted',
         'stopwatch',
+        'acceptanceCriteria',
       );
     }
 
@@ -316,6 +321,7 @@ module.exports = {
       'dueDate',
       'isDueCompleted',
       'stopwatch',
+      'acceptanceCriteria',
       'isSubscribed',
     ]);
 

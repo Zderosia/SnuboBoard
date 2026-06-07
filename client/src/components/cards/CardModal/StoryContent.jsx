@@ -21,6 +21,7 @@ import { ClosableContext } from '../../../contexts';
 import NameField from './NameField';
 import Thumbnail from './Thumbnail';
 import CustomFieldGroups from './CustomFieldGroups';
+import AcceptanceCriteria from './AcceptanceCriteria';
 import Communication from './Communication';
 import CreationDetailsStep from './CreationDetailsStep';
 import MoreActionsStep from './MoreActionsStep';
@@ -455,6 +456,7 @@ const StoryContent = React.memo(() => {
             )}
           </Gallery>
           <CustomFieldGroups />
+          <AcceptanceCriteria />
           {attachmentIds.length > 0 && (
             <div className={styles.contentModule}>
               <div className={styles.moduleWrapper}>
