@@ -7,7 +7,7 @@ exports.up = async (knex) =>
   knex.schema.alterTable('card', (table) => {
     /* Columns */
 
-    table.json('acceptance_criteria');
+    table.jsonb('acceptance_criteria');
   });
 
 exports.down = (knex) =>

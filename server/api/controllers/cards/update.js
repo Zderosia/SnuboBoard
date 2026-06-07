@@ -90,6 +90,29 @@
  *                     type: number
  *                     description: Total time in seconds
  *                     example: 3600
+ *               acceptanceCriteria:
+ *                 type: array
+ *                 nullable: true
+ *                 description: Acceptance criteria for the card
+ *                 items:
+ *                   type: object
+ *                   required:
+ *                     - name
+ *                     - isCompleted
+ *                     - position
+ *                   properties:
+ *                     name:
+ *                       type: string
+ *                       description: Text of the acceptance criterion
+ *                       example: System handles authentication
+ *                     isCompleted:
+ *                       type: boolean
+ *                       description: Whether this criterion is completed
+ *                       example: false
+ *                     position:
+ *                       type: number
+ *                       description: Position of the criterion
+ *                       example: 65536
  *               isSubscribed:
  *                 type: boolean
  *                 description: Whether the current user is subscribed to the card
